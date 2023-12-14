@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "xstring": "cpp",
+        "vector": "cpp",
+        "unordered_map": "cpp",
+        "xhash": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "xutility": "cpp",
+        "iostream": "cpp"
+    }
+}
