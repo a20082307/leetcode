@@ -8,21 +8,24 @@ public:
     Solution() {
         ios::sync_with_stdio(false);
         cin.tie(NULL);
+        cout.tie(NULL);
     }
 
     int compress(vector<char>& chars) {
         vector<char> ans;
 
-        int times = 0;
+        int times = 1;
         char cur = chars[0];
         for (auto c = chars.begin() + 1; c != chars.end(); c ++) {
             if (*c != cur) {
                 ans.push_back(cur);
 
-                string timesStr = to_string(times);
-                for (auto &c : timesStr)
-                    ans.push_back(c);
-
+                if (times > 1) {
+                    string timesStr = to_string(times);
+                    for (auto &c : timesStr)
+                        ans.push_back(c);
+                }
+                
                 cur = *c;
                 times = 1;
             }
@@ -30,9 +33,11 @@ public:
                 times ++;
         }
         ans.push_back(cur);
-        string timesStr = to_string(times);
-        for (auto &c : timesStr)
-            ans.push_back(c);
+        if (times > 1) {
+            string timesStr = to_string(times);
+            for (auto &c : timesStr)
+                ans.push_back(c);
+        }
 
         chars = ans;
 
