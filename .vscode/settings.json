@@ -8,6 +8,10 @@
         "bitset": "cpp",
         "initializer_list": "cpp",
         "xutility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_set": "cpp",
+        "set": "cpp",
+        "utility": "cpp",
+        "string": "cpp"
     }
 }
